@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.17
 
 WORKDIR /app
 
@@ -9,6 +9,6 @@ RUN go mod download
 
 RUN go build -o hello
 
-EXPOSE 8080
+EXPOSE 3000
 
-CMD ["./app/hello"]
+CMD ["./hello"]
